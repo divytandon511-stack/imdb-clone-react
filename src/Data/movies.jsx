@@ -345,14 +345,6 @@ let data = {
   total_pages: 536,
   total_results: 10717,
 };
-
-
-
-
-
-
-
-
 const IMAGE_URL = "https://image.tmdb.org/t/p/original";
 
 const movies = data.results.map((movie) => ({
