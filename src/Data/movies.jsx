@@ -352,7 +352,11 @@ const movies = data.results.map((movie) => ({
   title: movie.title,
   rating: movie.vote_average,
   year: movie.release_date?.split("-")[0],
-  image: IMAGE_URL + movie.poster_path
+  image: IMAGE_URL + movie.poster_path,
+  overview: movie.overview,
+  popularity: movie.popularity,
+  vote_average: movie.vote_average,
+  vote_count: movie.vote_count
 }));
 
 export default movies;

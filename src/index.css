@@ -82,3 +82,31 @@ body {
   border: none;
   width: 200px;
 }
+
+.movieDetails {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.movieDetails img {
+  width: 300px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.movieDetails p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.backBtn {
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
