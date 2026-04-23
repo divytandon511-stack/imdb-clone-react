@@ -1,0 +1,128 @@
+.section {
+  padding: 28px 20px 8px;
+  background: #121212;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.subtitle {
+  color: #aaa;
+  font-size: 13px;
+  margin: 0;
+}
+
+.ctaBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  color: #5799ef;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.15s;
+  white-space: nowrap;
+}
+
+.ctaBtn:hover {
+  color: #7ab0f5;
+}
+
+/* Scrollable row */
+.scrollContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.scrollTrack {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  /* extra left padding for rank numbers */
+  padding-left: 4px;
+}
+
+.scrollTrack::-webkit-scrollbar {
+  display: none;
+}
+
+/* Scroll arrows */
+.scrollArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #2c2c2c;
+  border: 1px solid #444;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.scrollArrow:hover {
+  background: #f5c518;
+  border-color: #f5c518;
+  color: #000;
+}
+
+.scrollLeft {
+  left: -12px;
+}
+
+.scrollRight {
+  right: -12px;
+}
+
+/* Fade edges */
+.scrollContainer::before,
+.scrollContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 16px;
+  width: 32px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.scrollContainer::before {
+  left: 0;
+  background: linear-gradient(to right, #121212, transparent);
+}
+
+.scrollContainer::after {
+  right: 0;
+  background: linear-gradient(to left, #121212, transparent);
+}

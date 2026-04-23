@@ -1,0 +1,68 @@
+.footer {
+  background: #1a1a1a;
+  border-top: 1px solid #2c2c2c;
+  padding: 32px 24px 24px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.logoBlock {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  background-color: #f5c518;
+  padding: 4px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.logoText {
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: #000;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 18px;
+  margin-bottom: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.link {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.15s;
+}
+
+.link:hover {
+  color: #f5c518;
+  text-decoration: underline;
+}
+
+.copy {
+  color: #666;
+  font-size: 12px;
+  margin: 0 0 12px;
+}
+
+.amazonBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #555;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}

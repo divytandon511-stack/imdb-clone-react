@@ -1,0 +1,339 @@
+.heroBanner {
+  display: flex;
+  background-color: #121212;
+  border-bottom: 1px solid #333;
+}
+
+/* ─── Video Area ─────────────────────────────────────────────── */
+.videoArea {
+  flex: 1;
+  position: relative;
+  min-height: 460px;
+  max-height: 520px;
+  overflow: hidden;
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gradientOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 40%,
+    rgba(0,0,0,0.85) 100%
+  );
+}
+
+/* Play button center */
+.playBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  border: 2px solid rgba(255,255,255,0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s, transform 0.2s;
+  padding-left: 3px;
+}
+
+.playBtn:hover {
+  background: rgba(245, 197, 24, 0.3);
+  border-color: #f5c518;
+  transform: translate(-50%, -60%) scale(1.1);
+}
+
+/* Title bar at bottom */
+.titleBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  gap: 8px;
+}
+
+.titleLeft,
+.titleRight {
+  flex-shrink: 0;
+}
+
+.prevBtn,
+.nextBtn {
+  background: rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  line-height: 1;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+  background: rgba(245, 197, 24, 0.25);
+}
+
+.titleCenter {
+  flex: 1;
+  text-align: center;
+}
+
+.titleChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #ccc;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 3px;
+  margin-bottom: 6px;
+}
+
+.chipDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #f5c518;
+  display: inline-block;
+}
+
+.heroTitle {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.7);
+}
+
+/* Thumbnail strip */
+.thumbnailStrip {
+  position: absolute;
+  bottom: 70px;
+  left: 16px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.addThumb {
+  width: 52px;
+  height: 72px;
+  background: rgba(0,0,0,0.5);
+  border: 1px dashed rgba(255,255,255,0.3);
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.addThumb:hover {
+  background: rgba(245, 197, 24, 0.2);
+}
+
+.thumbItem {
+  width: 52px;
+  height: 72px;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.thumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbLabel {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f5c518;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 3px #000;
+}
+
+/* ─── Up Next ────────────────────────────────────────────────── */
+.upNext {
+  width: 370px;
+  flex-shrink: 0;
+  background-color: #1a1a1a;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.upNextTitle {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 14px;
+}
+
+.upNextList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.upNextItem {
+  display: flex;
+  gap: 12px;
+  padding: 10px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.upNextItem:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+.itemThumbnail {
+  position: relative;
+  width: 120px;
+  height: 68px;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #2c2c2c;
+}
+
+.itemImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imdbThumb {
+  width: 100%;
+  height: 100%;
+  background: #f5c518;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imdbThumbBadge {
+  font-weight: 900;
+  font-size: 20px;
+  color: #000;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.imdbThumbSub {
+  font-size: 8px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+.playOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 6px;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+}
+
+.playCircle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding-left: 1px;
+}
+
+.duration {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.itemInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.itemTitle {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.itemSubtitle {
+  color: #aaa;
+  font-size: 12px;
+  margin: 0 0 8px;
+}
+
+.itemReactions {
+  display: flex;
+  gap: 12px;
+}
+
+.reaction {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #aaa;
+  font-size: 12px;
+}
