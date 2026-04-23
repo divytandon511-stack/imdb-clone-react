@@ -4,7 +4,7 @@
   border-bottom: 1px solid #333;
 }
 
-/* ─── Video Area ─────────────────────────────────────────────── */
+
 .videoArea {
   flex: 1;
   position: relative;
@@ -36,7 +36,7 @@
   );
 }
 
-/* Play button center */
+
 .playBtn {
   position: absolute;
   top: 50%;
@@ -63,7 +63,7 @@
   transform: translate(-50%, -60%) scale(1.1);
 }
 
-/* Title bar at bottom */
+
 .titleBar {
   position: absolute;
   bottom: 0;
@@ -139,7 +139,7 @@
   text-shadow: 0 1px 6px rgba(0,0,0,0.7);
 }
 
-/* Thumbnail strip */
+
 .thumbnailStrip {
   position: absolute;
   bottom: 70px;
@@ -195,7 +195,7 @@
   text-shadow: 0 1px 3px #000;
 }
 
-/* ─── Up Next ────────────────────────────────────────────────── */
+
 .upNext {
   width: 370px;
   flex-shrink: 0;
