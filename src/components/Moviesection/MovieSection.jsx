@@ -1,5 +1,5 @@
 import styles from './MovieSection.module.css';
-import MovieCard from '../Moviecard/MovieCard';
+import MovieCard from '../MovieCard/Moviecard';
 
 const FEATURED_MOVIES = [
   {
