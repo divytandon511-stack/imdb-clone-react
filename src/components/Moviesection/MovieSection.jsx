@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import styles from "./MovieSection.module.css";
-import MovieCard from "../MovieCard/MovieCard";
+import MovieCard from "../Moviecard/MovieCard";
 
 export default function MovieSection({ title, subtitle, movies, watchlist, onWatchlistToggle, showRanks, cta }) {
   const scrollRef = useRef(null);
