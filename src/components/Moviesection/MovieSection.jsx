@@ -30,8 +30,15 @@ export default function MovieSection({ title, subtitle, movies, watchlist, onWat
 
       {movies.length > 0 && (
         <div className={styles.scrollContainer}>
-
           <div className={styles.scrollTrack} ref={scrollRef}>
+            {movies.map((movie, index) => (
+              <MovieCard
+                key={movie.id}
+                movie={showRanks ? { ...movie, rank: index + 1 } : movie}
+                isInWatchlist={watchlist.includes(movie.id)}
+                onWatchlistToggle={onWatchlistToggle}
+              />
+            ))}
           </div>
 
           <button className={`${styles.arrow} ${styles.arrowLeft}`} onClick={scrollLeft}>‹</button>
