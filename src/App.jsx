@@ -8,17 +8,41 @@ import { trendingMovies, topRatedMovies, popularTvShows, allMovies } from "./dat
 
 export default function App() {
   
-  
   const [movies, setMovies] = useState([]); 
-
+  const [topRated, setTopRated] = useState([]);
+  const [tvShows, setTvShows] = useState([]);
   const [isLoading, setIsLoading] = useState(true);   
   const [searchQuery, setSearchQuery] = useState(""); 
+  const [searchResults, setSearchResults] = useState([])
   const [watchlist, setWatchlist] = useState([]);    
 
   useEffect(() => {
     setIsLoading(true);
+    
+    const timer = setTimeout(() => {
+      setMovies(trendingMovies);
+      setTopRated(topRatedMovies);
+      setTvShows(popularTvShows);
+      setIsLoading(false);
+    }, 800);
+
+    return () => clearTimeout(timer);
 
   }, []);
+
+  useEffect(() => {
+    if (searchQuery === "") {
+      setSearchResults([]);
+      return;
+    }
+
+    const filtered = allMovies.filter((movie) =>
+      movie.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+ 
+    setSearchResults(filtered);
+ 
+  }, [searchQuery]);
 
   function handleWatchlistToggle(movieId) {
     const isAlreadyAdded = watchlist.includes(movieId);
@@ -58,6 +82,7 @@ export default function App() {
           {searchQuery !== "" ? (
             <MovieSection
               title={"Search results for: " + searchQuery}
+              subtitle={searchResults.length + " titles found"}
               movies={searchResults}
               watchlist={watchlist}
               onWatchlistToggle={handleWatchlistToggle}
