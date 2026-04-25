@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "./App.module.css";
 import Navbar from "./components/Navbar/Navbar";
 import HeroBanner from "./components/HeroBanner/HeroBanner";
-import MovieSection from "./components/MovieSection/MovieSection";
+import MovieSection from "./components/Moviesection/MovieSection";
 import Footer from "./components/Footer/Footer";
 import { trendingMovies, topRatedMovies, popularTvShows, allMovies } from "./data/movies";
 
